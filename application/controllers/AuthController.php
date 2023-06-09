@@ -22,4 +22,8 @@ class AuthController extends CI_Controller {
 	{
 		$this->load->view('admin/admin_dashboard');
 	}
+	public function login_register()
+	{
+		$this->load->view('admin/login');
+	}
 }
