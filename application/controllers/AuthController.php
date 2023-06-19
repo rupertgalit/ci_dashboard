@@ -3,6 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class AuthController extends CI_Controller {
 
+	public function __construct(){
+		parent::__construct();
+
+		
+
+	}
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -18,8 +25,15 @@ class AuthController extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
+
+	 
 	public function index()
 	{
 		$this->load->view('admin/admin_dashboard');
+	}
+
+	public function test()
+	{
+		$this->load->view('hello');
 	}
 }

@@ -35,7 +35,7 @@ $config['base_url'] = 'http://localhost/ci-dashboard';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = 'index.php';
 
 /*
 |--------------------------------------------------------------------------
