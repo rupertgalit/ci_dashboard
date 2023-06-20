@@ -6,6 +6,9 @@ class AuthController extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 
+		$this->load->database();
+		$this->load->model('CrudModel');
+
 		
 
 	}
@@ -29,11 +32,26 @@ class AuthController extends CI_Controller {
 	 
 	public function index()
 	{
+		
 		$this->load->view('admin/admin_dashboard');
 	}
 
 	public function test()
 	{
 		$this->load->view('hello');
+	}
+
+
+	public function display_data(){
+
+		// ## With Model ####
+		// $result['data']=$this->CrudModel->display_record();
+
+		// ## Without Model ####
+		$result['data']=$this->db->select('*')
+                    ->from('payment_transaction')
+                    ->get()->result_array();
+
+		$this->load->view('crud-table',$result);
 	}
 }
