@@ -55,3 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 $route['test'] = 'welcome/test';
+$route['crud'] = 'authcontroller/display_data';
