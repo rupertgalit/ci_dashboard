@@ -52,6 +52,6 @@ class AuthController extends CI_Controller {
                     ->from('payment_transaction')
                     ->get()->result_array();
 
-		$this->load->view('crud-table',$result);
+		$this->load->view('admin/admin_dash',$result);
 	}
 }
